@@ -1,8 +1,12 @@
 # frozen_string_literal: true
 
-require_relative "weather_forecast/version"
+require 'faraday'
+require 'weather_forecast/version'
 
+# Gem Module
 module WeatherForecast
+  autoload :CLI, 'weather_forecast/cli'
+  autoload :Client, 'weather_forecast/client'
+
   class Error < StandardError; end
-  # Your code goes here...
 end
